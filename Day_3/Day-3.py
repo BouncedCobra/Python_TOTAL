@@ -1,43 +1,23 @@
-# name = 'Hola Mundo'
-# print(name.index('l'))
+texto = input('ingresa un texto: ')
+texto_minuscula = texto.lower()
 
 
-# palabra = "ordenador"
-# print(palabra[4])
+letras = input('ingresa tres letras: ')
+letras_minuscula = letras.lower()
 
+print(f'la letra {letras_minuscula[0]} aparece {texto.count(letras_minuscula[0])} veces')
+print(f'la letra {letras_minuscula[1]} aparece {texto.count(letras_minuscula[1])} veces')
+print(f'la letra {letras_minuscula[2]} aparece {texto.count(letras_minuscula[2])} veces')
 
-# frase = "En teoría, la teoría y la práctica son los mismos. En la práctica, no lo son."
-# print(frase.index('práctica'))
+palabras = texto.split()
+print(f'el texto tiene {len(palabras)} palabras')
 
+print(f'la primera letra del texto es {texto[0]} y la ultima es {texto[-1]}')
 
-# frase = "En teoría, la teoría y la práctica son los mismos. En la práctica, no lo son."
-# print(frase.rindex('práctica'))
+texto_invertido = palabras[::-1]
+texto_invertido = ' '.join(texto_invertido)
+print(f'el texto invertido es {texto_invertido}')
 
-
-# frase = "Controlar la complejidad es la esencia de la programación"
-# fragmento = frase[:9]
-# print(fragmento)
-
-
-# frase = "Nunca confíes en un ordenador que no puedas lanzar por una ventana"
-# fragmento = frase[8::3]
-# print(fragmento)
-
-
-# frase = "Es genial trabajar con ordenadores. No discuten, lo recuerdan todo y no se beben tu cerveza"
-# print(frase[::-1])
-
-
-# frase = "Especialmente en las comunicaciones electrónicas, la escritura enteramente en mayúsculas equivale a gritar."
-# print(frase.upper())
-
-
-# lista_palabras = ["La","legibilidad","cuenta."]
-# union = " ".join(lista_palabras)
-# print(union)
-
-
-frase = "Si la implementación es difícil de explicar, puede que sea una mala idea."
-change = frase.replace('difícil','fácil')
-change = change.replace('mala','buena')
-print(change)
+exist = 'python' in texto_minuscula
+resp = {True: 'si', False: 'no'}
+print(f'la palabra "python" {resp[exist]} esta en el texto.')
